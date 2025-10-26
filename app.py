@@ -278,8 +278,9 @@ def get_stats():
 @app.route('/')
 def serve_frontend():
     """Serves the index.html file."""
-    return send_from_directory('.', 'index.html')
+    return send_from_directory('templates', 'index.html')
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
+
 

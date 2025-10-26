@@ -20,6 +20,7 @@ app.config['MYSQL_PASSWORD'] = os.environ.get('DB_PASSWORD', 'nBmLGyzpMb')
 app.config['MYSQL_CHARSET'] = 'utf8mb4'
 app.config['MYSQL_CONNECT_TIMEOUT'] = 10
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'  # For dictionary-based results
+app.config['MYSQL_SSL_DISABLED'] = True
 
 # Initialize MySQL
 mysql = MySQL(app)
@@ -281,3 +282,4 @@ def serve_frontend():
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
+
